@@ -1,11 +1,11 @@
-# Several functions for creating vectors
+# Several handy functions for creating vectors
 
 import numpy as np
 
-#function to create nd vectors in (0, 10, 0, 10)\n",
 def vec(dim=2):
+    '''Creates random nd array. Each coordinate is lesser than 10'''
     return np.random.rand(dim)*10
 
-#function to create row-vectors
 def row(dim=2):
+    '''Creates random row-vectors in Rn. Each coordinate lesser than 10'''
     return np.array([vec(dim)])
