@@ -9,3 +9,10 @@ def vec(dim=2):
 def row(dim=2):
     '''Creates random row-vectors in Rn. Each coordinate lesser than 10'''
     return np.array([vec(dim)])
+
+
+def frobenius_norm(A):
+    return np.sum(A**2)**0.5
+
+def frobenius_distance(X, Y):
+    return frobenius_norm(X-Y)
