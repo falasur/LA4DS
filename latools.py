@@ -14,5 +14,6 @@ def row(dim=2):
 def frobenius_norm(A):
     return np.sum(A**2)**0.5
 
+
 def frobenius_distance(X, Y):
     return frobenius_norm(X-Y)
