@@ -11,6 +11,10 @@ def row(dim=2):
     return np.array([vec(dim)])
 
 
+def column(dim=2):
+    '''Creates random column-vectors in Rn. Each coordinate lesser than 10'''
+    return row(dim).T
+
 def frobenius_norm(A):
     return np.sum(A**2)**0.5
 
