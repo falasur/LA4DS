@@ -21,3 +21,20 @@ def frobenius_norm(A):
 
 def frobenius_distance(X, Y):
     return frobenius_norm(X-Y)
+
+def projection(projected, base):
+    '''Calculates projection of the projected vector on base'''
+    return base*np.dot(projected, base)/np.dot(base,base)
+
+def second_projection (projected, base):
+    '''Calculates the projection ortogonal to the base'''
+    return projected - projection(projected, base)
+
+def norm(x):
+    '''returns vector norm'''
+    return sum(x**2)**0.5
+
+
+def enorm(x, module):
+    '''Creates a vector of a given norm in a direction of a given vector'''
+    return x * (module / norm(x))
