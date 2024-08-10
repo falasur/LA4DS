@@ -16,6 +16,7 @@ def column(dim=2):
     return row(dim).T
 
 def frobenius_norm(A):
+    '''Calculates frobenius norm'''
     return np.sum(A**2)**0.5
 
 
@@ -38,3 +39,8 @@ def norm(x):
 def enorm(x, module):
     '''Creates a vector of a given norm in a direction of a given vector'''
     return x * (module / norm(x))
+
+
+def matrix(s=2, min=-10, max=10):
+    '''Creates random integer squared matrix of a given size'''
+    return np.random.randint(-10, 10, size=(s,s))
