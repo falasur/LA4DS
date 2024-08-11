@@ -41,6 +41,10 @@ def enorm(x, module):
     return x * (module / norm(x))
 
 
-def matrix(s=2, min=-10, max=10):
-    '''Creates random integer squared matrix of a given size'''
+def imatrix(s=2, min=-10, max=10):
+    '''Creates random integer square matrix of a given size'''
     return np.random.randint(-10, 10, size=(s,s))
+
+def matrix(s=2, min=-10, max=10):
+    '''Creates random inormally distributed square matrix of a given size'''
+    return np.random.randn(-10, 10, size=(s,s))
