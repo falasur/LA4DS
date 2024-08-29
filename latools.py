@@ -48,3 +48,12 @@ def imatrix(s=2, min=-10, max=10):
 def matrix(s=2):
     '''Creates random normally distributed square matrix of a given size'''
     return np.random.randn(s,s)
+
+def permutation(i,j, size):
+    '''Yields a permutation matrix that changes i and j column'''
+    P = np.eye(size)
+    P[i,i] = 0
+    P[j,j] = 0
+    P[i,j] = 1
+    P[j,i] = 1
+    return P
