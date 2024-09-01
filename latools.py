@@ -31,6 +31,7 @@ def second_projection (projected, base):
     '''Calculates the projection ortogonal to the base'''
     return projected - projection(projected, base)
 
+
 def norm(x):
     '''returns vector norm'''
     return sum(x**2)**0.5
@@ -45,9 +46,16 @@ def imatrix(s=2, min=-10, max=10):
     '''Creates random integer square matrix of a given size'''
     return np.random.randint(-10, 10, size=(s,s))
 
+
 def matrix(s=2):
     '''Creates random normally distributed square matrix of a given size'''
     return np.random.randn(s,s)
+
+
+def symmetrical_matrix(s=2, min=-3, max=3):
+    '''Creates symmetrical matrix'''
+    A = imatrix(s=s, min=min, max=max)
+    return A @ A.T
 
 def permutation(i,j, size):
     '''Yields a permutation matrix that changes i and j column'''
